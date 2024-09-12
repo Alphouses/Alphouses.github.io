@@ -46,7 +46,7 @@ colors:
 # SITE CUSTOMIZATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> start
 # Docs: https://redefine-docs.ohevan.com/basic/global
 global:
-  # Custom fonts
+  # Custom global fonts
   fonts:
     # Chinese fonts
     chinese: 
@@ -56,6 +56,11 @@ global:
     # English fonts
     english: 
       enable: false # Whether to enable custom english fonts
+      family:  # Font family
+      url:  # Font URL to CSS file
+    # Custom title fonts (navbar, sidebar)
+    title:
+      enable: false # Whether to enable custom title fonts
       family:  # Font family
       url:  # Font URL to CSS file
   # Content max width
@@ -80,7 +85,9 @@ global:
   # Whether to enable single page experience (using swup). See https://swup.js.org/. similar to pjax
   single_page: true
   # Whether to enable Preloader.
-  preloader: true
+  preloader:
+    enable: true #false #打开网页时的预加载文字
+    custom_message: 为美好的世界献上祝福 # Custom message. If empty, the site title will be displayed
   # Whether to enable open graph
   open_graph: true
   # Google Analytics
@@ -113,15 +120,16 @@ home_banner:
   style: fixed # static or fixed
   # Home banner image
   image: 
-    light: https://pic.imgdb.cn/item/66d46ce8d9c307b7e9ac0ffa.jpg # light mode
-    dark: https://pic.imgdb.cn/item/66d46809d9c307b7e9a8aced.jpg # dark mode
+    light: https://s21.ax1x.com/2024/09/12/pAnBDgO.jpg # light mode
+    dark: https://s21.ax1x.com/2024/09/12/pAn1Lpn.jpg # dark mode
   # Home banner title
   title: licoの博客
   # Home banner subtitle
   subtitle:
-    text: ["你 好","欢迎来到我的博客"] # subtitle text, array
+    text: [] # subtitle text, array 下面不用toko这地方可以自己写
     hitokoto:  # 一言配置
-      enable: false # Whether to enable hitokoto
+      enable: true #false # Whether to enable hitokoto
+      show_author: false  # Whether to show author
       api: https://v1.hitokoto.cn # API URL, can add types, see https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
     typing_speed: 100 # Typing speed (ms)
     backing_speed: 80 # Backing speed (ms)
@@ -158,7 +166,7 @@ home_banner:
     # Social links
     links:
       #[fa-regular fa-github]: [https://github.com/alphouse]
-      github:  https://github.com/alphouse # your GitHub URL
+      github:  https://github.com/alphouses # your GitHub URL
       # fa-solid fa-wand-magic-sparkles: https://example.com
       # fa-regular fa-music: https://example.com
       # instagram: # your Instagram URL
@@ -168,8 +176,8 @@ home_banner:
       # ...... # you can add more
     # Social links with QRcode drawers
     qrs:
-      qq: https://thumbnail1.baidupcs.com/thumbnail/7f2fe6d9fk6c3fa8aa3f9654938632b1?fid=1466200850-250528-751168921995164&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-viZw%2fVFFkn7txvccGodK%2bINcbFY%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9105647784150140266&dp-callid=0&time=1725073200&size=c1920_u1080&quality=90&vuk=1466200850&ft=image&autopolicy=1
-      weixin: https://thumbnail1.baidupcs.com/thumbnail/ba8e0b3eelafb86c3a7247d4b6325938?fid=1466200850-250528-1071754724501298&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-Q9fAsY4IBwc249P31M%2bplyTy%2fpo%3d&expires=8h&chkbd=0&chkv=0&dp-logid=9105647784150140266&dp-callid=0&time=1725073200&size=c1920_u1080&quality=90&vuk=1466200850&ft=image&autopolicy=1 # your Wechat QRcode image URL
+      qq: https://s21.ax1x.com/2024/09/12/pAnBtb9.jpg # your QQ QRcode image URL
+      weixin: https://s21.ax1x.com/2024/09/12/pAnBYDJ.jpg # your Wechat QRcode image URL
       # ...... # you can add more
 # HOME BANNER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
@@ -201,7 +209,7 @@ navbar:
       path: https://space.bilibili.com/102399466
       icon: fa-regular fa-chart-bar # can be empty
     github: 
-      path: https://github.com/alphouse
+      path: https://github.com/alphouses
       icon: fa-regular fa-github # can be empty # fa-archive
     QQ:
       path: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1502566445&website=www.oicqzone.com
@@ -210,7 +218,7 @@ navbar:
       icon:  fa-regular fa-link # can be empty
       submenus:
         Gitee: https://gitee.com/alphouse
-        github: https://github.com/alphouse
+        github: https://github.com/alphouses
     # Archives: 
     #   path: /archives 
     #   icon: fa-regular fa-archive # can be empty
@@ -236,7 +244,7 @@ navbar:
     # Whether to enable
     enable: false
     # Preload search data when the page loads
-    preload: false # true
+    preload: true
 # NAVIGATION BAR <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -263,6 +271,8 @@ home:
       # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
+  # Article excerpt length
+  excerpt_length: 200 # Max length of article excerpt
   # Article categories visibility
   categories:
     enable: true  # Whether to enable
@@ -307,6 +317,9 @@ articles:
   code_block:
     copy: true # Whether to enable code block copy button
     style: mac # mac | simple
+    highlight_theme: # Color scheme for highlightjs code highlighting. For preview, see https://highlightjs.org/examples 看不懂
+      light: github # light mode theme, support: github, atom-one-light, default
+      dark: vs2015 # dark mode theme, support: github-dark, monokai-sublime, vs2015, night-owl, atom-one-dark, nord, tokyo-night-dark, a11y-dark, agate
     font: # Custom font
       enable: false # Whether to enable
       family: # Font family
@@ -468,7 +481,7 @@ cdn:
   # Whether to enable CDN
   enable: false
   # CDN Provider
-  provider: npmmirror # npmmirror, zstatic, sustech, staticfile, bootcdn, cdnjs, jsdelivr, unpkg, custom
+  provider: npmmirror # npmmirror, zstatic, sustech, cdnjs, jsdelivr, unpkg, custom
   # Custom CDN URL
   # format example: https://cdn.custom.com/hexo-theme-redefine/${version}/source/${path}
   # The ${path} must leads to the root of the "source" folder of the theme

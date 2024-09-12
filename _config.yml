@@ -103,7 +103,7 @@ theme: redefine
 
 # deploy:
 #   type: 'git'
-#   repository: git@github.com:Alphouse/Alphouse.github.io.git
+#   repository: git@github.com:Alphouse/Alphouses.github.io.git
 #   branch: gh-pages
 
 deploy:
