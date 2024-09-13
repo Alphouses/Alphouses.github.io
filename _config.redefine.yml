@@ -176,8 +176,8 @@ home_banner:
       # ...... # you can add more
     # Social links with QRcode drawers
     qrs:
-      qq: https://s21.ax1x.com/2024/09/13/pAnWgln.jpg # your QQ QRcode image URL
-      weixin: https://s21.ax1x.com/2024/09/13/pAnWcSs.jpg # your Wechat QRcode image URL
+      qq: https://raw.githubusercontent.com/Alphouses/alphouses-Blog-bed/main/QQ-QRcode.jpg # your QQ QRcode image URL
+      weixin: https://raw.githubusercontent.com/Alphouses/alphouses-Blog-bed/main/wechat-QRcode.jpg # your Wechat QRcode image URL
       # ...... # you can add more
 # HOME BANNER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
