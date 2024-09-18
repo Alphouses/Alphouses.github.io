@@ -3,7 +3,7 @@ title: PCB艺术画制作
 date: 2024-09-12 22:50:10
 tags:
 categories: experience  # 这是分类
-excerpt: "艺术源于生活"
+excerpt: "艺术源于生活" #这是封面简介
 #thumbnail: ![Test](/images/test.jpg) 
 ---
 ##### 简易PCB艺术画需要用到什么
@@ -17,12 +17,17 @@ excerpt: "艺术源于生活"
    4. 焊盘颜色
 3. 嘉立创EDA画板逻辑
 ---
+##### 图片展示
+![Test](/images/PCB艺术画-EVA-个人博客.jpg) 
+---
 ##### 参考教程
 灵感来源：
 [我不是姓崔的][我不是姓崔的]
 [雷_233][雷_233]
 
-
+---
+##### 后续
+会添加基于NXP的NT3H1101W0FHKH的NFC标签，实现通过NFC读取文本、连接WiFi、蓝牙、打开应用等操作
 
 
 
